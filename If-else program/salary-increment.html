@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let salary = parseInt(prompt("enter salary"));
+        let increment = 0;
+        if( salary >= 1000 && salary <= 5000){
+            document.write("your salary is",salary);
+            increment = 1000;
+        }else if(salary >= 5000 && salary <= 10000){
+            document.write("your salary is",salary);
+            increment = 2000;
+        }
+        else if(salary >= 10000 && salary <= 20000){
+            document.write("your salary is",salary);
+            increment = 3000;
+        }
+        else if(salary >= 20000 && salary <= 50000){
+            document.write("your salary is",salary);
+            increment = 4000;
+        }else{
+            document.write("your salary is",salary);
+            increment = 5000;
+        }
+            document.write("<br>after incriment"+(increment+salary));
+
+
+    </script>
+</body>
+</html>

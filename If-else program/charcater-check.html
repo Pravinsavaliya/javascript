@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let char = prompt("enter value");
+        if(typeof(char)==='string'){
+            alert(`The entered value is a string`);
+        }else if(!isNaN(char)){
+            alert("the entered value is a number");
+        }else{
+            alert("the entered value is a special character");
+        }
+    </script>
+</body>
+</html>
