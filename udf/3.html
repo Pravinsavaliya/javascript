@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        //1) for meter to foot 
+        let m = parseFloat(prompt("Enter  meter:"));
+        let foot = (m) => m*3.28084;
+        document.write('<br>  Meter to foot is :' +foot(m));
+
+        // 2)for Celsius to Fahrenheit
+        let c = parseFloat(prompt("Enter celsius:"));
+        let Fahrenheit = (c) => c*(9/5)+32;
+        document.write('<br> Celsius to Fahrenheit is :' +Fahrenheit(c));
+
+        // 3)for Dollar to Rupees
+        let d = parseInt(prompt("Enter dollar:"));
+        let Rupees =(d) => d*83;
+        document.write('<br> Dollar to Rupeeal is :' +Rupees(d));
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let  a = parseInt(prompt("Enter value a:"));
+        let  b = parseInt(prompt("Enter value b:"));
+                
+        let rectanlge = (a,b) => a*b;
+        document.write('<br>  Area  of rectanlge is :'+rectanlge(a,b));
+        let Triangle = (a,b) => (a*b)/2;
+        document.write('<br> Area of Triangele is :'+Triangle(a,b));
+        let circle = (a) => {
+            let pi=3.14;
+            return pi*a*a;
+        }
+        document.write('<br> Area of circle is :'+circle(a));
+        
+    </script>
+</body>
+</html>
