@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+</head>
+
+<body>
+    <script>
+        document.write('<br> Employe Data');
+        let a = {
+            "e_id": 1,
+            "e_name": "Pravin",
+            "e_surname": "Savaliya",
+            "e_Type": "Director",
+            "e_Email": "abc123@gmail.com",
+            "e_phone": 7203004064,
+            "e_Address": "Nirmal Apartment,narayanpura"
+        }
+        for (let x in a) {
+            document.write('<br> ' + x + " : " + a[x]);
+        }
+        a.e_Salary = 50000;
+
+        document.write('<br><br>Add a data in epmloye<br><br>');
+        for (let x in a) {
+            document.write('<br> ' + x + " : " + a[x]);
+        }
+        delete a.e_Type;
+        document.write('<br><br>Delete  a data in epmloye<br><br>');
+        Object.entries(a).forEach(([x, i]) => {
+            document.write('<br> ' + x + " : " + i);
+        });
+
+    </script>
+</body>
+
+</html>
