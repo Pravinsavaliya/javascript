@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="shortcut icon" href="./icons8-calculator-50.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+   
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="calculator">
+        <center>
+            <h3>Calculator</h3>
+            <input type="text" name="no" id="no"><br><br>
+          
+                <button style="background-color: #D4D4D2; color: black;" onclick="clearAll()">C</button>
+                <button style="background-color: #D4D4D2; color: black;" onclick="deleteLastCharacter()"><i class="fa-solid fa-delete-left"></i></button>
+                <button style="background-color: #D4D4D2; color: black;" onclick="addData('%')">%</button>
+                <button class="op-btn" onclick="addData('/')"><i class="fa-solid fa-divide"></i></button><br><br>
+                <button onclick="addData('7')">7</button>
+                <button onclick="addData('8')">8</button>
+                <button onclick="addData('9')">9</button>
+                <button class="op-btn" onclick="addData('*')"><i class="fa-solid fa-xmark"></i></button><br><br>
+                <button onclick="addData('4')">4</button>
+                <button onclick="addData('5')">5</button>
+                <button onclick="addData('6')">6</button>
+                <button class="op-btn" onclick="addData('-')"><i class="fa-solid fa-minus"></i></button><br><br>
+                <button onclick="addData('1')">1</button>
+                <button onclick="addData('2')">2</button>
+                <button onclick="addData('3')">3</button>
+                <button class="op-btn" onclick="addData('+')"><i class="fa-solid fa-plus"></i></button><br><br>
+                <button style="width: 105px;" onclick="addData('0')">0</button>
+                <button onclick="addData('.')">.</button>
+                <button class="op-btn" onclick="getAns()"><i class="fa-solid fa-equals"></i></button>
+         
+        </center>
+    </div>
+    <script src="coustom.js"></script>
+</body>
+
+</html>
