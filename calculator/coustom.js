@@ -1,8 +1,17 @@
-let tr='';
-const addData = (i)=>{
+let tr = '';
+
+const addData = (i) => {
+    if (tr === '' && (i === '+' || i === '*' || i === '/')) {
+        return;
+    }else{
     tr += i;
     document.getElementById("no").value = tr;
+    }
+    
+    // tr += i;
+    // document.getElementById("no").value = tr;
 }
+
 function deleteLastCharacter() {
     let currentValue = document.getElementById("no").value;
     document.getElementById("no").value = currentValue.slice(0, -1);
