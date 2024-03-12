@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        /* Styling for input fields */
+        input[type="text"],
+        input[type="number"] {
+            width: calc(100% - 20px); 
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            border: 1px solid #131010; 
+            border-radius: 4px; /* Rounded corners */
+        }
+
+        /* Styling for error messages */
+        .error {
+            color: red;
+            font-size: 12px;
+        }
+
+        /* Styling for submit button */
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        /* Styling for form container */
+        .form-container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        h3{
+            text-align: center;
+            color: blue;
+            font-size: xx-large;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form-container">
+        <h3>Register Form</h3>
+        <form action="#" method="post" name="regsform" onsubmit="return checkForm()">
+            <label for="">Name*</label>
+            <input type="text" name="name" id="" placeholder="Enter Your Name">
+            <span id="errname" class="error"></span>
+            <br><br>
+            <label for="">Email*</label>
+            <input type="text" name="email" id="" placeholder="Enter Your Email">
+            <span id="erremail" class="error"></span>
+            <br><br>
+            <label for="">Gender</label>
+            <input type="radio" name="gender" id="" value="Male">Male
+            <input type="radio" name="gender" id="" value="Female">Female
+            <br><br>
+            <label for="">Number*</label>
+            <input type="number" name="no" id="" placeholder="Enter Your Number">
+            <span id="errno" class="error"></span>
+            <br><br>
+            <label for="">Password*</label>
+            <input type="text" name="pwd" id="" placeholder="Enter Your Password">
+            <span id="errpwd" class="error"></span>
+            <br><br><div style="text-align: center;">
+            <input  type="submit" name="btn1" value="Save">
+        </div>
+        </form>
+    </div>
+    <script>
+        function checkForm() {
+            let name = document.regsform.name.value;
+            let no = document.regsform.no.value;
+            let email = document.regsform.email.value;
+            let pwd = document.regsform.pwd.value;
+            let status = 0;
+
+            document.getElementById("errname").innerHTML = "";
+            document.getElementById("erremail").innerHTML = "";
+            document.getElementById("errno").innerHTML = "";
+            document.getElementById("errpwd").innerHTML = "";
+
+            if (name == "") {
+                document.getElementById("errname").innerHTML = "Please enter a name";
+                status = 1;
+            } else if(name.length < 2 || name.length > 10) {
+                document.getElementById("errname").innerHTML = "Please enter minimum 2 characters and maximum 10 characters";
+                status = 1;
+            }
+            var validemail = /^[\w\.-]+@[a-zA-Z\d\.-]+\.[a-zA-Z]{2,}$/;
+            if (email == "") {
+                document.getElementById("erremail").innerHTML = "Please enter an email";
+                status = 1;
+            }else if(!email.match(validemail)) {
+                document.getElementById("erremail").innerHTML = "Please enter a valid email";
+                status = 1;
+            }
+            var validnumber = /^(0|91)?[6-9][0-9]{9}$/;
+
+            if (no == "") {
+                document.getElementById("errno").innerHTML = "Please enter a number";
+                status = 1;
+            }else if
+            (!no.match(validnumber)) {
+                document.getElementById("errno").innerHTML = "Please enter a valid Number";
+                status = 1;
+
+            }
+
+            if (pwd == "") {
+                document.getElementById("errpwd").innerHTML = "Please enter a password";
+                status = 1;
+            }
+            else if(pwd.length < 8) {
+                document.getElementById("errpwd").innerHTML = "Please enter more than 8 characters";
+                status = 1;
+
+            }
+
+            if (status == 1) {
+                return false;
+            } else {
+                return true;
+
+            }
+
+        }
+    </script>
+</body>
+
+</html>
