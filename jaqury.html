@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="form-container">
+        <h3>Register Form</h3>
+        <form action="#" method="post" name="regsform" >
+            <label for="name">Name*</label>
+            <input type="text" name="name" id="name" placeholder="Enter Your Name">
+            <span id="errname" class="error"></span>
+            <br><br>
+            <label for="email">Email*</label>
+            <input type="email" name="email" id="email" placeholder="Enter Your Email">
+            <span id="erremail" class="error"></span>
+            <br><br>
+            <label for="gender">Gender</label>
+            <input type="radio" name="gender" id="male" value="Male">Male
+            <input type="radio" name="gender" id="female" value="Female">Female
+            <br><br>
+            <label for="no">Number*</label>
+            <input type="text" name="no" id="no" placeholder="Enter Your Number">
+            <span id="errno" class="error"></span>
+            <br><br>
+            <label for="pwd">Password*</label>
+            <input type="password" name="pwd" id="pwd" placeholder="Enter Your Password">
+            <span id="errpwd" class="error"></span>
+            <br><br>
+            <label for="confirmpwd">Confirm Password*</label>
+            <input type="password" name="confirmpwd" id="confirmpwd" placeholder="Confirm Your Password">
+            <span id="errconfirmpwd" class="error"></span>
+            <div style="text-align: center;">
+                <input  type="submit" name="btn1" value="Save">
+            </div>
+        </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.20.0/jquery.validate.min.js" integrity="sha512-WMEKGZ7L5LWgaPeJtw9MBM4i5w5OSBlSjTjCtSnvFJGSVD26gE5+Td12qN5pvWXhuWaWcVwF++F7aqu9cvqP0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        $("form[name='regsform']").validate({
+            rules:{
+                name:{
+                    required:true,
+                    minlength:2,
+                    maxlength:10
+                },
+                email:{
+                    required:true,
+                    email:true
+                },
+                pwd:{
+                    required:true
+                },
+                confirmpwd:{
+                    required:true,
+                    equalTo:"#pwd"
+                },
+                no:{
+                    required:true,
+                    number:true
+                }
+            },
+            messages:{
+                name:{
+                    required : "Please enter your name",
+                    minlength: "Name should be at least 2 characters long",
+                    maxlength: "Name should not exceed 10 characters"
+                },
+                email:{
+                    required: "Please enter your email address",
+                    email: "Please enter a valid email address"
+                },
+                pwd:{
+                    required: "Please enter a password"
+                },
+                confirmpwd:{
+                    required: "Please confirm your password",
+                    equalTo: "Passwords do not match"
+                },
+                no:{
+                    required: "Please enter your number",
+                    number: "Please enter a valid number"
+                }
+            }
+        });
+    </script>
+</body>
+</html>

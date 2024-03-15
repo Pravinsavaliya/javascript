@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oop concept class and object</title>
+</head>
+<body>
+    <script>
+        class emp {
+            constructor(name,id,age,gender){
+                this.name = name;
+                this.id = id;
+                this.age = age;
+                this.gender = gender;
+            }
+            getData(){
+                document.write('Name is '+ this.name);
+                document.write('<br>id is '+ this.id);
+                document.write('<br>Age is '+ this.age);
+                document.write('<br>Gender is '+ this.gender);
+                
+            }
+        }
+        const e1= new emp('Pravin',101,20,'Male');
+        e1.getData();
+    </script>
+</body>
+</html>
