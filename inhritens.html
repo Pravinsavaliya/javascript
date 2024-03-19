@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //inheritens
+        class abc{
+            constructor(name){
+                this.name = name;
+            }
+            getData(){
+                document.write('<br> Name is ' + this.name);
+            }
+        }
+        class test extends abc{
+            constructor(name,age){
+                super(name)
+                this.age = age;
+            }
+            getData(){
+                super.getData();
+                document.write('<br>Age is ' +this.age);
+            }
+        }
+        const obj = new test("pqr",20);
+        obj.getData();
+    </script>
+</body>
+</html>

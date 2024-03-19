@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+ 
+class User {
+    constructor(username, surname, age, salary, qualifications) {
+        this.username = username;
+        this.surname = surname;
+        this.age = age;
+        this.salary = salary;
+        this.qualifications = qualifications;
+    }
+
+    countKeys() {
+        let count = 0;
+        for (let key in this) {
+            if (this.hasOwnProperty(key)) {
+                count++;
+            }
+        }
+        return count;
+    }
+}
+
+const user = new User("john_doe", "Doe", 30, 50000, ["10th", "12th", "BCA", "MCA"]);
+
+const keyCount = user.countKeys();
+document.write("Number of keys in the object: " + keyCount);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+function Vehicle(type, tire) {
+    this.type = type;
+    this.tire = tire;
+}
+
+Vehicle.prototype.printDetails = function() {
+    document.write("<p>Type: " + this.type + "</p>");
+    document.write("<p>Number of tires: " + this.tire + "</p>");
+    document.write("<hr>");
+};
+
+var car = new Vehicle("Car", 4);
+var bus = new Vehicle("Bus", 6);
+var truck = new Vehicle("Truck", 10);
+
+car.printDetails();
+bus.printDetails();
+truck.printDetails();
+
+    </script>
+</body>
+</html>

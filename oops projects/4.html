@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+ 
+function Student(name, age, marks) {
+    this.name = name;
+    this.age = age;
+    this.marks = marks;
+
+    this.findAverage = function() {
+        var sum = this.marks.reduce(function(acc, cur) {
+            return acc + cur;
+        }, 0);
+        return sum / this.marks.length;
+    };
+
+    this.displayDetails = function() {
+        document.write("Name: " + this.name);
+        document.write("<br>Age: " + this.age);
+        document.write("<br>Marks: " + this.marks.join(", "));
+        document.write("<br>Average Marks: " + this.findAverage());
+    };
+}
+
+var student1 = new Student("John", 20, [85, 90, 75, 88, 92]);
+
+student1.displayDetails();
+
+    </script>
+</body>
+</html>
