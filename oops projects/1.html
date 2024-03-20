@@ -7,28 +7,19 @@
 </head>
 <body>
     <script>
-function User(username, surname, age, salary, qualifications) {
-    this.username = username;
-    this.surname = surname;
-    this.age = age;
-    this.salary = salary;
-    this.qualifications = qualifications;
-
-
-    this.display = function() {
-        document.write("Surname: " + this.surname);
-        document.write("<br>Username: " + this.username);
-        document.write("<br>Age: " + this.age);
-        document.write("<br>Salary: " + this.salary);
-        document.write("<br>Qualifications:<br>");
-        this.qualifications.forEach(function(qualification, index) {
-            document.write((index + 1) + ".  " + qualification);
-        });
-    };
-}
-
-var user1 = new User("john_doe", "Doe", 30, 50000, ["10th", "12th", "BCA", "MCA"]);
-user1.display();
+let users = {
+        username: "kushal",
+        surname: "savaliya",
+        age: 21,
+        salary: 35000,
+        qualification: ["10th", "12th", "Bca", "Mca"],
+      };
+      
+      let count = 0;
+      for (const user in users) {
+        document.write(user + "---" + users[user] + "<br>");
+        count++;
+      }
 
     </script>
 </body>

@@ -6,18 +6,28 @@
     <title>Document</title>
 </head>
 <body>
-    <input type="text" id="inputField" placeholder="Type only alphabets">
+    <input type="text" onkeyup="filterInput()" id="alp" /><br />
     <script>
-         var inputField = document.getElementById('inputField');
-        
-        inputField.addEventListener('keypress', function(event) {
-            var key = event.key;
-    
-            var regex = /^[a-zA-Z]*$/;
-            if (!regex.test(key)) {
-                event.preventDefault();
-            }
-        });
-    </script>
+      function filterInput() {
+        let input = document.getElementById("alp").value;
+        let filteredInput = "";
+
+        for (let i = 0; i < input.length; i++) {
+          let char = input[i];
+          if (isNaN(char)) {
+            filteredInput += char;
+          }
+        }
+
+        document.getElementById("alp").value = filteredInput;
+      }
+      let users = {
+        username: "Jay",
+        surname: "Ranpariya",
+        age: 38,
+        salary: 35000,
+        qualification: ["10th", "12th", "Bca", "Mca"],
+      };
+      </script>
 </body>
 </html>

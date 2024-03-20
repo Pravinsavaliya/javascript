@@ -7,30 +7,40 @@
 </head>
 <body>
     <script>
- 
-function Student(name, age, marks) {
-    this.name = name;
-    this.age = age;
-    this.marks = marks;
+       class students {
+        constructor(name, age, subj1, subj2, subj3) {
+          this.name = name;
+          this.age = age;
+          this.subj1 = subj1;
+          this.subj2 = subj2;
+          this.subj3 = subj3;
+          this.marks = this.subj1 + this.subj2 + this.subj3;
+        }
+        averge() {
+          let avg = 0;
+          avg = this.marks / 3;
+          return avg;
+        }
+        display() {
+          let avg = this.averge();
+          document.write(
+            "name is = " +
+              this.name +
+              "<br>" +
+              "age =" +
+              this.age +
+              "<br>" +
+              "Total marks = " +
+              this.marks +
+              "<br>" +
+              "average marks = " +
+              avg
+          );
+        }
+      }
 
-    this.findAverage = function() {
-        var sum = this.marks.reduce(function(acc, cur) {
-            return acc + cur;
-        }, 0);
-        return sum / this.marks.length;
-    };
-
-    this.displayDetails = function() {
-        document.write("Name: " + this.name);
-        document.write("<br>Age: " + this.age);
-        document.write("<br>Marks: " + this.marks.join(", "));
-        document.write("<br>Average Marks: " + this.findAverage());
-    };
-}
-
-var student1 = new Student("John", 20, [85, 90, 75, 88, 92]);
-
-student1.displayDetails();
+      let std1 = new students("kushal", 21, 80, 90, 95);
+      std1.display();
 
     </script>
 </body>
